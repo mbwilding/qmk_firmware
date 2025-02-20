@@ -12,9 +12,11 @@
 #define S_HAT        S(KC_6)        // ^
 #define S_AMPER      S(KC_7)        // &
 #define S_ASTER      S(KC_8)        // *
-#define S_LPARE      S(KC_9)        // (
-#define S_RPARE      S(KC_0)        // )
+#define S_LPAR       S(KC_9)        // (
+#define S_RPAR       S(KC_0)        // )
 #define S_QUEST      S(KC_SLSH)     // ?
+#define S_LANG       S(KC_COMM)     // <
+#define S_RANG       S(KC_DOT)      // >
 
 enum layers {
     BASE,
@@ -35,10 +37,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [SYMB] = LAYOUT(
-        _______, _______,    _______,    _______,    _______, _______,             _______, _______, _______,    _______, _______,   _______,
-        _______, KC_GRV ,    S_AMPER,    S_HASH ,    S_HAT  , _______,             _______, S_DOLLA, S_ASTER,    S_PERCE, _______,   _______,
-        _______, S(KC_COMM), KC_LBRC,    S(KC_LBRC), S_LPARE, KC_SLSH,             _______, S_RPARE, S(KC_RBRC), KC_RBRC, S(KC_DOT), _______,
-        _______, KC_EQL ,    S(KC_BSLS), KC_DOWN,    KC_UP  , _______,             _______, KC_LEFT, KC_RIGHT,   KC_MINS, S(KC_EQL), _______,
+        _______, _______,  _______,   _______,    _______, _______,             _______, _______, _______,    _______, _______,   _______,
+        _______, KC_GRV , S_AMPER,    S_HASH ,    S_HAT  , _______,             _______, S_DOLLA, S_ASTER,    S_PERCE, _______,   _______,
+        _______, S_LANG , KC_LBRC,    S(KC_LBRC), S_LPAR , KC_SLSH,             _______, S_RPAR , S(KC_RBRC), KC_RBRC, S_RANG , _______,
+        _______, KC_EQL , S(KC_BSLS), KC_DOWN,    KC_UP  , _______,             _______, KC_LEFT, KC_RIGHT,   KC_MINS, S(KC_EQL), _______,
 
                                                      KC_TRNS, KC_TRNS,             KC_TRNS, KC_TRNS
     ),
