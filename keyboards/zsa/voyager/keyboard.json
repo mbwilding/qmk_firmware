@@ -20,7 +20,7 @@
         "mousekey": false,
         "extrakey": true,
         "nkro": true,
-        "swap_hands": true,
+        "swap_hands": false,
         "rgb_matrix": true
     },
     "bootmagic": {
