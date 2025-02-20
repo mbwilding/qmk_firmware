@@ -17,7 +17,7 @@
         "bootmagic": true,
         "caps_word": true,
         "deferred_exec": true,
-        "mousekey": true,
+        "mousekey": false,
         "extrakey": true,
         "nkro": true,
         "swap_hands": true,
