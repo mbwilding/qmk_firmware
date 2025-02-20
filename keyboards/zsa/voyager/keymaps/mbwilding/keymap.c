@@ -4,6 +4,18 @@
 
 #include QMK_KEYBOARD_H
 
+#define S_EXCLA      S(KC_1)        // !
+#define S_AT         S(KC_2)        // @
+#define S_HASH       S(KC_3)        // #
+#define S_DOLLA      S(KC_4)        // $
+#define S_PERCE      S(KC_5)        // %
+#define S_HAT        S(KC_6)        // ^
+#define S_AMPER      S(KC_7)        // &
+#define S_ASTER      S(KC_8)        // *
+#define S_LPARE      S(KC_9)        // (
+#define S_RPARE      S(KC_0)        // )
+#define S_QUEST      S(KC_SLSH)     // ?
+
 enum layers {
     BASE,
     SYMB,
@@ -17,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, TO(GAME),
         KC_DEL , KC_QUOT, KC_COMM, KC_DOT , KC_P   , KC_Y   ,                      KC_F   , KC_G   , KC_C   , KC_R   , KC_L   , S(KC_2),
         KC_BSPC, KC_A   , KC_O   , KC_E   , KC_U   , KC_I   ,                      KC_D   , KC_H   , KC_T   , KC_N   , KC_S   , KC_MINS,
-        S(KC_1), KC_SCLN, KC_Q   , KC_J   , KC_K   , KC_X   ,                      KC_B   , KC_M   , KC_W   , KC_V   , KC_Z   , S(KC_SLSH),
+        S_EXCLA, KC_SCLN, KC_Q   , KC_J   , KC_K   , KC_X   ,                      KC_B   , KC_M   , KC_W   , KC_V   , KC_Z   , S_QUEST,
 
                   MT(MOD_LSFT, KC_SPC), MT(MO(MISC), KC_ENT),                      MT(MO(NUMB), KC_TAB), MT(MO(SYMB), KC_ESC)
     ),
