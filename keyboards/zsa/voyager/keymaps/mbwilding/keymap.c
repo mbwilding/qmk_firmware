@@ -9,7 +9,7 @@ extern rgb_config_t rgb_matrix_config;
 extern MidiDevice midi_device;
 
 #define MOON_LED_LEVEL LED_LEVEL
-#define ML_SAFE_RANGE SAFE_RANG
+#define ML_SAFE_RANGE SAFE_RANGE
 
 enum custom_keycodes {
     RGB_SLD = ML_SAFE_RANGE,
