@@ -89,6 +89,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         // Right Thumbs
         C_LBLUE , C_LBLUE
     },
+
     [SYMB] = {
         // Left Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
@@ -108,6 +109,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         // Right Thumbs
         C_LBLUE , C_LBLUE
     },
+
     [NUMB] = {
         // Left Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
@@ -127,6 +129,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         // Right Thumbs
         C_LBLUE , C_LBLUE
     },
+
     [MISC] = {
         // Left Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
@@ -146,6 +149,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         // Right Thumbs
         C_OFF   , C_OFF
     },
+
     [GAME] = {
         // Left Keys
         C_BLUE  , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN ,
