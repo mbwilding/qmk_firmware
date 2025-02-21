@@ -33,7 +33,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(4),
-    KC_DELETE,      KC_QUOTE,       MT(MOD_LALT, KC_COMMA),MT(MOD_LGUI, KC_DOT),MT(MOD_LCTL, KC_P),KC_Y,                                           KC_F,           MT(MOD_RCTL, KC_G),MT(MOD_RGUI, KC_C),MT(MOD_RALT, KC_R),KC_L,           KC_AT,
+    KC_DELETE,      KC_QUOTE,       MT(MOD_LALT, KC_COMMA),MT(MOD_LGUI, KC_DOT),MT(MOD_LCTL, KC_P),KC_Y,                            KC_F,           MT(MOD_RCTL, KC_G),MT(MOD_RGUI, KC_C),MT(MOD_RALT, KC_R),KC_L,  KC_AT,
     KC_BSPC,        KC_A,           KC_O,           KC_E,           KC_U,           KC_I,                                           KC_D,           KC_H,           KC_T,           KC_N,           KC_S,           KC_MINUS,
     KC_EXLM,        ALL_T(KC_SCLN), MEH_T(KC_Q),    KC_J,           KC_K,           KC_X,                                           KC_B,           KC_M,           KC_W,           MEH_T(KC_V),    ALL_T(KC_Z),    KC_QUES,
                                                     MT(MOD_LSFT, KC_SPACE), LT(3,KC_ENTER),                         LT(2,KC_TAB),   LT(1,KC_ESCAPE)
