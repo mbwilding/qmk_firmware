@@ -11,10 +11,11 @@ extern rgb_config_t rgb_matrix_config;
 
 #define C_OFF {0, 0, 0}
 #define C_BLUE {169, 255, 255}
+#define C_CYAN {131, 255, 255}
 #define C_GREEN {74, 255, 255}
+#define C_LBLUE {152, 255, 255}
 #define C_PURPLE {188, 255, 255}
 #define C_RED {0, 255, 255}
-#define C_LBLUE {152, 255, 255}
 #define C_YELLOW {41, 255, 255}
 
 enum custom_keycodes {
@@ -113,9 +114,9 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [NUMB] = {
         // Left Keys
         C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
-        C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF,
-        C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF,
-        C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF,
+        C_OFF, C_CYAN, C_CYAN, C_CYAN, C_CYAN, C_OFF,
+        C_OFF, C_CYAN, C_CYAN, C_CYAN, C_CYAN, C_OFF,
+        C_OFF, C_CYAN, C_CYAN, C_CYAN, C_CYAN, C_OFF,
 
         // Left Thumbs
         C_LBLUE, C_LBLUE,
