@@ -84,18 +84,18 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [BASE] = {
         // Left Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_BLUE  , C_YELLOW, C_YELLOW, C_YELLOW, C_PURPLE, C_PURPLE,
-        C_BLUE  , C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE,
-        C_YELLOW, C_YELLOW, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE,
+        C_SYSTEM, C_PUNCTU, C_PUNCTU, C_PUNCTU, C_LETTER, C_LETTER,
+        C_SYSTEM, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER,
+        C_PUNCTU, C_PUNCTU, C_LETTER, C_LETTER, C_LETTER, C_LETTER,
 
         // Left Thumbs
         C_LAYER , C_LAYER ,
 
         // Right Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER ,
-        C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_RED   ,
-        C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_RED   ,
-        C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_YELLOW,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_SYMBOL,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_SYMBOL,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_PUNCTU,
 
         // Right Thumbs
         C_LAYER , C_LAYER ,
@@ -104,18 +104,18 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [SYMB] = {
         // Left Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_YELLOW, C_RED   , C_RED   , C_RED   , C_OFF   ,
-        C_OFF   , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN ,
-        C_OFF   , C_RED   , C_RED   , C_BLUE  , C_BLUE  , C_OFF   ,
+        C_OFF   , C_PUNCTU, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF   ,
+        C_OFF   , C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL,
+        C_OFF   , C_SYMBOL, C_SYMBOL, C_SYSTEM, C_SYSTEM, C_OFF   ,
 
         // Left Thumbs
         C_LAYER , C_LAYER ,
 
         // Right Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_RED   , C_RED   , C_RED   , C_OFF   , C_OFF   ,
-        C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_OFF   ,
-        C_OFF   , C_BLUE  , C_BLUE  , C_RED   , C_RED   , C_OFF   ,
+        C_OFF   , C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF   , C_OFF   ,
+        C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF   ,
+        C_OFF   , C_SYSTEM, C_SYSTEM, C_SYMBOL, C_SYMBOL, C_OFF   ,
 
         // Right Thumbs
         C_LAYER , C_LAYER ,
@@ -133,9 +133,9 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
         // Right Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_GREEN , C_GREEN , C_GREEN , C_OFF   , C_OFF   ,
-        C_OFF   , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_OFF   ,
-        C_OFF   , C_GREEN , C_GREEN , C_GREEN , C_OFF   , C_OFF   ,
+        C_OFF   , C_NUMBER, C_NUMBER, C_NUMBER, C_OFF   , C_OFF   ,
+        C_OFF   , C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_OFF   ,
+        C_OFF   , C_NUMBER, C_NUMBER, C_NUMBER, C_OFF   , C_OFF   ,
 
         // Right Thumbs
         C_LAYER , C_LAYER ,
@@ -163,19 +163,19 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [GAME] = {
         // Left Keys
-        C_BLUE  , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN ,
-        C_BLUE  , C_PURPLE, C_WSAD  , C_PURPLE, C_PURPLE, C_PURPLE,
-        C_BLUE  , C_WSAD  , C_WSAD  , C_WSAD  , C_PURPLE, C_PURPLE,
-        C_BLUE  , C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE,
+        C_SYSTEM, C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER,
+        C_SYSTEM, C_LETTER, C_WSAD  , C_LETTER, C_LETTER, C_LETTER,
+        C_SYSTEM, C_WSAD  , C_WSAD  , C_WSAD  , C_LETTER, C_LETTER,
+        C_SYSTEM, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER,
 
         // Left Thumbs
         C_LAYER , C_LAYER ,
 
         // Right Keys
-        C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_LBLUE ,
-        C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_OFF   ,
-        C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_YELLOW, C_OFF   ,
-        C_PURPLE, C_PURPLE, C_YELLOW, C_YELLOW, C_RED   , C_OFF   ,
+        C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_LBLUE,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_OFF  ,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_PUNCTU, C_OFF  ,
+        C_LETTER, C_LETTER, C_PUNCTU, C_PUNCTU, C_SYMBOL, C_OFF  ,
 
         // Right Thumbs
         C_OFF   , C_OFF

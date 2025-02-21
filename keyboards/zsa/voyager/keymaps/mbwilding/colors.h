@@ -12,6 +12,7 @@
 #define C_FKEY     C_CYAN
 #define C_LAYER    C_LBLUE
 #define C_LETTER   C_PURPLE
+#define C_SYSTEM   C_BLUE
 #define C_NUMBER   C_GREEN
 #define C_PUNCTU   C_YELLOW
 #define C_SYMBOL   C_RED
