@@ -70,7 +70,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [MIDI] = LAYOUT_voyager(
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(BASE),
+    MI_TOGG,        KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(BASE),
     MI_Cs4,         MI_Ds4,         KC_NO,          KC_NO,          MI_Gs4,         MI_As4,                                         KC_NO,          MI_Cs5,         MI_Ds5,         KC_NO,          KC_NO,          MI_Gs5,
     MI_C4,          MI_D4,          MI_E4,          MI_F4,          MI_G4,          MI_A4,                                          MI_B4,          MI_C5,          MI_D5,          MI_E5,          MI_F5,          MI_G5,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
@@ -93,102 +93,102 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [BASE] = {
         // Left Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
         C_SYSTEM, C_PUNCTU, C_PUNCTU, C_PUNCTU, C_LETTER, C_LETTER,
         C_SYSTEM, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER,
         C_PUNCTU, C_PUNCTU, C_LETTER, C_LETTER, C_LETTER, C_LETTER,
 
         // Left Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER , C_LAYER ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_LAYER,  C_LAYER,
         C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_SYMBOL,
         C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_SYMBOL,
         C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_PUNCTU,
 
         // Right Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER
     },
 
     [SYMB] = {
         // Left Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_PUNCTU, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF   ,
-        C_OFF   , C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL,
-        C_OFF   , C_SYMBOL, C_SYMBOL, C_SYSTEM, C_SYSTEM, C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_PUNCTU, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
+        C_OFF,    C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL,
+        C_OFF,    C_SYMBOL, C_SYMBOL, C_SYSTEM, C_SYSTEM, C_OFF,
 
         // Left Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF   , C_OFF   ,
-        C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF   ,
-        C_OFF   , C_SYSTEM, C_SYSTEM, C_SYMBOL, C_SYMBOL, C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,    C_OFF,
+        C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
+        C_OFF,    C_SYSTEM, C_SYSTEM, C_SYMBOL, C_SYMBOL, C_OFF,
 
         // Right Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER
     },
 
     [NUMB] = {
         // Left Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_FKEY  , C_FKEY  , C_FKEY  , C_FKEY  , C_OFF   ,
-        C_OFF   , C_FKEY  , C_FKEY  , C_FKEY  , C_FKEY  , C_OFF   ,
-        C_OFF   , C_FKEY  , C_FKEY  , C_FKEY  , C_FKEY  , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_FKEY,   C_FKEY,   C_FKEY,   C_FKEY,   C_OFF,
+        C_OFF,    C_FKEY,   C_FKEY,   C_FKEY,   C_FKEY,   C_OFF,
+        C_OFF,    C_FKEY,   C_FKEY,   C_FKEY,   C_FKEY,   C_OFF,
 
         // Left Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_NUMBER, C_NUMBER, C_NUMBER, C_OFF   , C_OFF   ,
-        C_OFF   , C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_OFF   ,
-        C_OFF   , C_NUMBER, C_NUMBER, C_NUMBER, C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_NUMBER, C_NUMBER, C_NUMBER, C_OFF,    C_OFF,
+        C_OFF,    C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_OFF,
+        C_OFF,    C_NUMBER, C_NUMBER, C_NUMBER, C_OFF,    C_OFF,
 
         // Right Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER
     },
 
     [MISC] = {
         // Left Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
 
         // Left Thumbs
-        C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
 
         // Right Thumbs
-        C_OFF   , C_OFF
+        C_OFF,    C_OFF
     },
 
     [MIDI] = {
         // Left Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
 
         // Left Thumbs
-        C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_LAYER,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
 
         // Right Thumbs
-        C_OFF   , C_OFF
+        C_OFF,    C_OFF
     },
 
     [GAME] = {
@@ -199,16 +199,16 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_SYSTEM, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER,
 
         // Left Thumbs
-        C_LAYER , C_LAYER ,
+        C_LAYER,  C_LAYER,
 
         // Right Keys
         C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_NUMBER, C_LAYER,
-        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_OFF  ,
-        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_PUNCTU, C_OFF  ,
-        C_LETTER, C_LETTER, C_PUNCTU, C_PUNCTU, C_SYMBOL, C_OFF  ,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_OFF,
+        C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_PUNCTU, C_OFF,
+        C_LETTER, C_LETTER, C_PUNCTU, C_PUNCTU, C_SYMBOL, C_OFF,
 
         // Right Thumbs
-        C_OFF   , C_OFF
+        C_OFF,   C_OFF
     },
 };
 
