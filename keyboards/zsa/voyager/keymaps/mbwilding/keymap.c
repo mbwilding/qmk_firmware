@@ -71,11 +71,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [MIDI] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(BASE),
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    MI_Cs4,         MI_Ds4,         KC_NO,          KC_NO,          MI_Gs4,         MI_As4,                                         KC_NO,          MI_Cs5,         MI_Ds5,         KC_NO,          KC_NO,          MI_Gs5,
+    MI_C4,          MI_D4,          MI_E4,          MI_F4,          MI_G4,          MI_A4,                                          MI_B4,          MI_C5,          MI_D5,          MI_E5,          MI_F5,          MI_G5,
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
 
-                                                                    KC_NO,          KC_NO,                                          KC_NO,          KC_NO
+                                                                    MI_OCTD,        MI_TRSD,                                        MI_TRSU,        MI_OCTU
   ),
 
   [GAME] = LAYOUT_voyager(
