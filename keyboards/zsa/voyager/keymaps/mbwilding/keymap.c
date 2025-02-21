@@ -107,31 +107,16 @@ void set_layer_color(int layer) {
 }
 
 bool rgb_matrix_indicators_user(void) {
-  if (rawhid_state.rgb_control) {
+  if (rawhid_state.rgb_control || keyboard_config.disable_layer_led)
       return false;
-  }
-  if (keyboard_config.disable_layer_led) { return false; }
-  switch (biton32(layer_state)) {
-    case 0:
-      set_layer_color(BASE);
-      break;
-    case 1:
-      set_layer_color(SYMB);
-      break;
-    case 2:
-      set_layer_color(NUMB);
-      break;
-    case 3:
-      set_layer_color(MISC);
-      break;
-    case 4:
-      set_layer_color(GAME);
-      break;
-   default:
-    if (rgb_matrix_get_flags() == LED_FLAG_NONE)
-      rgb_matrix_set_color_all(0, 0, 0);
-    break;
-  }
+
+  uint32_t layer = biton32(layer_state);
+  set_layer_color(layer);
+
+  // TODO: If layer out of range do this
+  // if (rgb_matrix_get_flags() == LED_FLAG_NONE)
+  //     rgb_matrix_set_color_all(0, 0, 0);
+
   return true;
 }
 
