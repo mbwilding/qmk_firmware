@@ -5,16 +5,17 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
-#define MOON_LED_LEVEL LED_LEVEL
-
 extern rgb_config_t rgb_matrix_config;
 extern MidiDevice midi_device;
 
+#define MOON_LED_LEVEL LED_LEVEL
+#define ML_SAFE_RANGE SAFE_RANG
+
 enum custom_keycodes {
-    RGB_SLD = SAFE_RANGE,
+    RGB_SLD = ML_SAFE_RANGE,
 };
 
-// User Code
+// User Headers
 
 #include "layers.h"
 #include "colors.h"
