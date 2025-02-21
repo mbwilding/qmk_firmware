@@ -79,10 +79,42 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_YELLOW, C_RED, C_RED, C_RED, C_OFF, C_OFF, C_GREEN, C_GREEN, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_RED, C_RED, C_BLUE, C_BLUE, C_OFF, C_LBLUE, C_LBLUE, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_RED, C_RED, C_RED, C_OFF, C_OFF, C_GREEN, C_GREEN, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_OFF, C_BLUE, C_BLUE, C_RED, C_RED, C_OFF, C_LBLUE, C_LBLUE
     },
     [NUMB] = {
-        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF, C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF, C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF, C_LBLUE, C_LBLUE, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_OFF, C_OFF, C_GREEN, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_OFF, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_OFF, C_LBLUE, C_LBLUE
+        // Left Keys
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF,
+        C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF,
+        C_OFF, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, {131, 255, 255}, C_OFF,
+
+        // Left Thumbs
+        C_LBLUE, C_LBLUE,
+
+        // Right Keys
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_OFF,
+        C_OFF, C_GREEN, C_GREEN, C_GREEN, C_GREEN, C_OFF,
+        C_OFF, C_GREEN, C_GREEN, C_GREEN, C_OFF, C_OFF,
+
+        // Right Thumbs
+        C_LBLUE, C_LBLUE
     },
     [MISC] = {
-        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF
+        // Left Keys
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+
+        // Left Thumbs
+        C_OFF, C_OFF,
+
+        // Right Keys
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+        C_OFF, C_OFF, C_OFF, C_OFF, C_OFF, C_OFF,
+
+        // Right Keys
+        C_OFF, C_OFF
     },
     [GAME] = {
         // Left Keys
