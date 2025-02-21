@@ -7,15 +7,11 @@
 
 #define MOON_LED_LEVEL LED_LEVEL
 
-#define MIDI_CC_OFF 0
-#define MIDI_CC_ON  127
-
 extern rgb_config_t rgb_matrix_config;
 extern MidiDevice midi_device;
 
 enum custom_keycodes {
     RGB_SLD = SAFE_RANGE,
-    MIDI_CC80 = SAFE_RANGE + 1,
 };
 
 // User Code
@@ -28,6 +24,7 @@ enum layers {
     SYMB,
     NUMB,
     MISC,
+    MIDI,
     GAME,
 
     TOTAL_LAYERS,
@@ -37,7 +34,7 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_voyager(
-    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(GAME),
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(MIDI),       TO(GAME),
     KC_DELETE,      KC_QUOTE,       ALTL(KC_COMM),  METL(KC_DOT),   CTLL(KC_P),     KC_Y,                                           KC_F,           CTLR(KC_G),     METR(KC_C),     ALTR(KC_R),     KC_L,           KC_AT,
     KC_BSPC,        KC_A,           KC_O,           KC_E,           KC_U,           KC_I,                                           KC_D,           KC_H,           KC_T,           KC_N,           KC_S,           KC_MINUS,
     KC_EXLM,        ALL_T(KC_SCLN), MEH_T(KC_Q),    KC_J,           KC_K,           KC_X,                                           KC_B,           KC_M,           KC_W,           MEH_T(KC_V),    ALL_T(KC_Z),    KC_QUES,
@@ -64,11 +61,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [MISC] = LAYOUT_voyager(
-    KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         ,                                 KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO,
-    KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         ,                                 KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO,
-    KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         ,                                 KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO,
-    KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         ,                                 KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO         , KC_NO,
-                                                                    KC_NO         , KC_NO         ,                                 KC_NO         , KC_NO
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+
+                                                                    KC_NO,          KC_NO,                                          KC_NO,          KC_NO
+  ),
+
+  [MIDI] = LAYOUT_voyager(
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(BASE),
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+    KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
+
+                                                                    KC_NO,          KC_NO,                                          KC_NO,          KC_NO
   ),
 
   [GAME] = LAYOUT_voyager(
@@ -95,7 +102,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_LAYER , C_LAYER ,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER , C_LAYER ,
         C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_SYMBOL,
         C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_SYMBOL,
         C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_LETTER, C_PUNCTU,
@@ -156,6 +163,26 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
         // Right Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+
+        // Right Thumbs
+        C_OFF   , C_OFF
+    },
+
+    [MIDI] = {
+        // Left Keys
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
+
+        // Left Thumbs
+        C_OFF   , C_OFF   ,
+
+        // Right Keys
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER ,
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
@@ -233,13 +260,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 rgblight_mode(1);
             }
             return false;
-        case MIDI_CC80:
-            if (record -> event.pressed) {
-                midi_send_cc(&midi_device, midi_config.channel, 80, MIDI_CC_ON);
-            } else {
-                midi_send_cc(&midi_device, midi_config.channel, 80, MIDI_CC_OFF);
-            }
-            return true;
     }
     return true;
 }
