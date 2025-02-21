@@ -6,8 +6,26 @@
 #include "version.h"
 
 #include "colors.h"
-#include "layers.h"
 #include "mods.h"
+
+typedef struct {
+    enum qk_keycode_defines key;
+    uint8_t color[3];
+} key;
+
+enum layers {
+    BASE,
+    SYMB,
+    NUMB,
+    MISC,
+    GAME,
+};
+
+key keys[][52] = {
+    [BASE] = {
+        { KC_NO, C_OFF },
+    },
+};
 
 // Keys
 
