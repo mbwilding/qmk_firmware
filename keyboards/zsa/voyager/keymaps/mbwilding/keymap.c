@@ -25,6 +25,8 @@ enum layers {
     NUMB,
     MISC,
     GAME,
+
+    TOTAL_LAYERS,
 };
 
 // Keys
@@ -208,11 +210,15 @@ bool rgb_matrix_indicators_user(void) {
         return false;
 
     uint32_t layer = biton32(layer_state);
-    set_layer_color(layer);
-
-    // TODO: If layer out of range do this
-    // if (rgb_matrix_get_flags() == LED_FLAG_NONE)
-    //     rgb_matrix_set_color_all(0, 0, 0);
+    if (layer < TOTAL_LAYERS)
+    {
+        set_layer_color(layer);
+    }
+    else
+    {
+        if (rgb_matrix_get_flags() == LED_FLAG_NONE)
+            rgb_matrix_set_color_all(0, 0, 0);
+    }
 
     return true;
 }
