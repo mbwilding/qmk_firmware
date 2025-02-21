@@ -89,16 +89,16 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_YELLOW, C_YELLOW, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE,
 
         // Left Thumbs
-        C_LBLUE , C_LBLUE ,
+        C_LAYER , C_LAYER ,
 
         // Right Keys
-        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LBLUE ,
+        C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_LAYER ,
         C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_RED   ,
         C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_RED   ,
         C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_YELLOW,
 
         // Right Thumbs
-        C_LBLUE , C_LBLUE
+        C_LAYER , C_LAYER ,
     },
 
     [SYMB] = {
@@ -109,7 +109,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF   , C_RED   , C_RED   , C_BLUE  , C_BLUE  , C_OFF   ,
 
         // Left Thumbs
-        C_LBLUE , C_LBLUE ,
+        C_LAYER , C_LAYER ,
 
         // Right Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
@@ -118,7 +118,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF   , C_BLUE  , C_BLUE  , C_RED   , C_RED   , C_OFF   ,
 
         // Right Thumbs
-        C_LBLUE , C_LBLUE
+        C_LAYER , C_LAYER ,
     },
 
     [NUMB] = {
@@ -129,7 +129,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF   , C_CYAN  , C_CYAN  , C_CYAN  , C_CYAN  , C_OFF   ,
 
         // Left Thumbs
-        C_LBLUE , C_LBLUE ,
+        C_LAYER , C_LAYER ,
 
         // Right Keys
         C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   , C_OFF   ,
@@ -138,7 +138,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF   , C_GREEN , C_GREEN , C_GREEN , C_OFF   , C_OFF   ,
 
         // Right Thumbs
-        C_LBLUE , C_LBLUE
+        C_LAYER , C_LAYER ,
     },
 
     [MISC] = {
@@ -164,12 +164,12 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [GAME] = {
         // Left Keys
         C_BLUE  , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN ,
-        C_BLUE  , C_PURPLE, C_RED   , C_PURPLE, C_PURPLE, C_PURPLE,
-        C_BLUE  , C_RED   , C_RED   , C_RED   , C_PURPLE, C_PURPLE,
+        C_BLUE  , C_PURPLE, C_WSAD  , C_PURPLE, C_PURPLE, C_PURPLE,
+        C_BLUE  , C_WSAD  , C_WSAD  , C_WSAD  , C_PURPLE, C_PURPLE,
         C_BLUE  , C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE, C_PURPLE,
 
         // Left Thumbs
-        C_BLUE  , C_BLUE  ,
+        C_LAYER , C_LAYER ,
 
         // Right Keys
         C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_GREEN , C_LBLUE ,
