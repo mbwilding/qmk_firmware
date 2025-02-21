@@ -14,5 +14,5 @@
 #define C_LETTER   C_PURPLE
 #define C_NUMBER   C_GREEN
 #define C_PUNCTU   C_YELLOW
-#define C_SYMB     C_RED
+#define C_SYMBOL   C_RED
 #define C_WSAD     C_RED
