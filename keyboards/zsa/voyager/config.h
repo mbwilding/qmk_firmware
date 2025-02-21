@@ -23,3 +23,5 @@
 
 #define TAPPING_TERM 144
 #define QUICK_TAP_TERM 0
+
+#define MIDI_ADVANCED

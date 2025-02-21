@@ -6,12 +6,16 @@
 #include "version.h"
 
 #define MOON_LED_LEVEL LED_LEVEL
-#define ML_SAFE_RANGE SAFE_RANGE
+
+#define MIDI_CC_OFF 0
+#define MIDI_CC_ON  127
 
 extern rgb_config_t rgb_matrix_config;
+extern MidiDevice midi_device;
 
 enum custom_keycodes {
-    RGB_SLD = ML_SAFE_RANGE,
+    RGB_SLD = SAFE_RANGE,
+    MIDI_CC80 = SAFE_RANGE + 1,
 };
 
 // User Code
@@ -225,10 +229,17 @@ bool rgb_matrix_indicators_user(void) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case RGB_SLD:
-            if (record->event.pressed) {
+            if (record -> event.pressed) {
                 rgblight_mode(1);
             }
             return false;
+        case MIDI_CC80:
+            if (record -> event.pressed) {
+                midi_send_cc(&midi_device, midi_config.channel, 80, MIDI_CC_ON);
+            } else {
+                midi_send_cc(&midi_device, midi_config.channel, 80, MIDI_CC_OFF);
+            }
+            return true;
     }
     return true;
 }
