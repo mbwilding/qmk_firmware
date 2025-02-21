@@ -61,10 +61,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-void keyboard_post_init_user(void) {
-    rgb_matrix_enable();
-}
-
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [BASE] = {
         // Left Keys
@@ -162,6 +158,10 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF   , C_OFF
     },
 };
+
+void keyboard_post_init_user(void) {
+    rgb_matrix_enable();
+}
 
 void set_layer_color(int layer) {
     for (int i = 0; i < RGB_MATRIX_LED_COUNT; i++) {
