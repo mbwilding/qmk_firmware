@@ -185,7 +185,8 @@ void set_layer_color(int layer) {
 }
 
 bool rgb_matrix_indicators_user(void) {
-    if (rawhid_state.rgb_control || keyboard_config.disable_layer_led) return false;
+    if (rawhid_state.rgb_control || keyboard_config.disable_layer_led)
+        return false;
 
     uint32_t layer = biton32(layer_state);
     set_layer_color(layer);
