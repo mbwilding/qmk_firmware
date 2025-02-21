@@ -14,7 +14,8 @@ typedef struct {
 } tap;
 
 enum {
-    SINGLE_TAP = 1,
+    NONE,
+    SINGLE_TAP,
     SINGLE_HOLD,
     DOUBLE_TAP,
     DOUBLE_HOLD,
@@ -24,8 +25,7 @@ enum {
 
 static tap dance_state[TOTAL_TAP_DANCES];
 
-uint8_t dance_step(tap_dance_state_t *state);
-
+// uint8_t dance_step(tap_dance_state_t *state);
 uint8_t dance_step(tap_dance_state_t *state) {
     if (state->count == 1) {
         if (state->interrupted || !state->pressed) return SINGLE_TAP;
@@ -38,10 +38,9 @@ uint8_t dance_step(tap_dance_state_t *state) {
     return MORE_TAPS;
 }
 
-
-void on_esc_del_numb(tap_dance_state_t *state, void *user_data);
-void esc_del_numb_finished(tap_dance_state_t *state, void *user_data);
-void esc_del_numb_reset(tap_dance_state_t *state, void *user_data);
+// void on_esc_del_numb(tap_dance_state_t *state, void *user_data);
+// void esc_del_numb_finished(tap_dance_state_t *state, void *user_data);
+// void esc_del_numb_reset(tap_dance_state_t *state, void *user_data);
 
 void on_esc_del_numb(tap_dance_state_t *state, void *user_data) {
     if(state->count == 3) {
@@ -74,7 +73,7 @@ void esc_del_numb_reset(tap_dance_state_t *state, void *user_data) {
         case DOUBLE_TAP: unregister_code16(KC_DELETE); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_TAB); break;
     }
-    dance_state[TD_ESC_DEL_NUMB].step = 0;
+    dance_state[TD_ESC_DEL_NUMB].step = NONE;
 }
 
 tap_dance_action_t tap_dance_actions[] = {
