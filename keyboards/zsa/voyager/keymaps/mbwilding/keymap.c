@@ -18,7 +18,7 @@ enum custom_keycodes {
 
 #include "layers.h"
 #include "colors.h"
-#include "tap_dance.h"
+#include "tap_dances.h"
 
 // Keys
 
@@ -246,7 +246,7 @@ bool rgb_matrix_indicators_user(void) {
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case RGB_SLD:
-            if (record -> event.pressed) {
+            if (record->event.pressed) {
                 rgblight_mode(1);
             }
             return false;

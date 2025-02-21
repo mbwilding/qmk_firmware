@@ -4,6 +4,8 @@
 
 enum tap_dance_codes {
   TD_ESC_DEL_NUMB,
+
+  TOTAL_TAP_DANCES
 };
 
 typedef struct {
@@ -20,7 +22,7 @@ enum {
     MORE_TAPS
 };
 
-static tap dance_state[1];
+static tap dance_state[TOTAL_TAP_DANCES];
 
 uint8_t dance_step(tap_dance_state_t *state);
 
@@ -53,8 +55,8 @@ void on_esc_del_numb(tap_dance_state_t *state, void *user_data) {
 }
 
 void esc_del_numb_finished(tap_dance_state_t *state, void *user_data) {
-    dance_state[0].step = dance_step(state);
-    switch (dance_state[0].step) {
+    dance_state[TD_ESC_DEL_NUMB].step = dance_step(state);
+    switch (dance_state[TD_ESC_DEL_NUMB].step) {
         case SINGLE_TAP: register_code16(KC_TAB); break;
         case SINGLE_HOLD: layer_on(L_NUMB); break;
         case DOUBLE_TAP: register_code16(KC_DELETE); break;
@@ -64,19 +66,18 @@ void esc_del_numb_finished(tap_dance_state_t *state, void *user_data) {
 
 void esc_del_numb_reset(tap_dance_state_t *state, void *user_data) {
     wait_ms(10);
-    switch (dance_state[0].step) {
+    switch (dance_state[TD_ESC_DEL_NUMB].step) {
         case SINGLE_TAP: unregister_code16(KC_TAB); break;
         case SINGLE_HOLD:
-          layer_off(2);
+          layer_off(L_NUMB);
         break;
         case DOUBLE_TAP: unregister_code16(KC_DELETE); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_TAB); break;
     }
-    dance_state[0].step = 0;
+    dance_state[TD_ESC_DEL_NUMB].step = 0;
 }
 
 tap_dance_action_t tap_dance_actions[] = {
     // SINGLE_TAP, DOUBLE_TAP, SINGLE_HOLD
     [TD_ESC_DEL_NUMB] = ACTION_TAP_DANCE_FN_ADVANCED(on_esc_del_numb, esc_del_numb_finished, esc_del_numb_reset),
 };
-
