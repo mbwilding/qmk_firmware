@@ -9,14 +9,7 @@
 #include "layers.h"
 #include "mods.h"
 
-#define MOON_LED_LEVEL LED_LEVEL
-#define ML_SAFE_RANGE SAFE_RANGE
-
-extern rgb_config_t rgb_matrix_config;
-
-enum custom_keycodes {
-    RGB_SLD = ML_SAFE_RANGE,
-};
+// Keys
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT_voyager(
@@ -59,6 +52,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                                     KC_SPACE,       KC_ENTER,                                       KC_NO,          KC_NO
   ),
+};
+
+// LED
+
+#define MOON_LED_LEVEL LED_LEVEL
+#define ML_SAFE_RANGE SAFE_RANGE
+
+extern rgb_config_t rgb_matrix_config;
+
+enum custom_keycodes {
+    RGB_SLD = ML_SAFE_RANGE,
 };
 
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
