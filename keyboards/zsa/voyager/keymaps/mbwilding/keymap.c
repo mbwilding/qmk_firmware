@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_BSPC,        KC_A,           KC_O,           KC_E,           KC_U,           KC_I,                                           KC_D,           KC_H,           KC_T,           KC_N,           KC_S,           KC_MINUS,
     KC_EXLM,        ALL_T(KC_SCLN), MEH_T(KC_Q),    KC_J,           KC_K,           KC_X,                                           KC_B,           KC_M,           KC_W,           MEH_T(KC_V),    ALL_T(KC_Z),    KC_QUES,
 
-                                                                    MT(MOD_LSFT, KC_SPACE), LT(3,KC_ENTER),                         LT(2,KC_TAB),   LT(1,KC_ESCAPE)
+                                                                    MT(MOD_LSFT, KC_SPC), LT(3,KC_ENT),                             LT(2,KC_TAB),   LT(1,KC_ESC)
   ),
   [SYMB] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,
@@ -172,8 +172,8 @@ void set_layer_color(int layer) {
         if (!hsv.h && !hsv.s && !hsv.v) {
             rgb_matrix_set_color(i, 0, 0, 0);
         } else {
-            RGB   rgb = hsv_to_rgb(hsv);
-            float f   = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
+            RGB rgb = hsv_to_rgb(hsv);
+            float f = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
             rgb_matrix_set_color(i, f * rgb.r, f * rgb.g, f * rgb.b);
         }
     }
