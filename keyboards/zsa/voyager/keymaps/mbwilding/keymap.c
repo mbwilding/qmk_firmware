@@ -4,30 +4,17 @@
 
 #include QMK_KEYBOARD_H
 #include "version.h"
+
+#include "layers.h"
+#include "colors.h"
+
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
 
 extern rgb_config_t rgb_matrix_config;
 
-#define C_OFF    {000, 000, 000}
-#define C_BLUE   {169, 255, 255}
-#define C_CYAN   {131, 255, 255}
-#define C_GREEN  {074, 255, 255}
-#define C_LBLUE  {152, 255, 255}
-#define C_PURPLE {188, 255, 255}
-#define C_RED    {000, 255, 255}
-#define C_YELLOW {041, 255, 255}
-
 enum custom_keycodes {
     RGB_SLD = ML_SAFE_RANGE,
-};
-
-enum layers {
-    BASE,
-    SYMB,
-    NUMB,
-    MISC,
-    GAME,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
