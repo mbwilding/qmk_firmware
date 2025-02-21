@@ -6,4 +6,3 @@
 #define METR(kc) MT(MOD_RGUI, kc)
 #define SFTL(kc) MT(MOD_LSFT, kc)
 #define SFTR(kc) MT(MOD_RSFT, kc)
-
