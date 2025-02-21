@@ -5,13 +5,19 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
+#define MOON_LED_LEVEL LED_LEVEL
+#define ML_SAFE_RANGE SAFE_RANGE
+
+extern rgb_config_t rgb_matrix_config;
+
+enum custom_keycodes {
+    RGB_SLD = ML_SAFE_RANGE,
+};
+
+// User Code
+
 #include "colors.h"
 #include "mods.h"
-
-typedef struct {
-    enum qk_keycode_defines key;
-    uint8_t color[3];
-} key;
 
 enum layers {
     BASE,
@@ -19,12 +25,6 @@ enum layers {
     NUMB,
     MISC,
     GAME,
-};
-
-key keys[][52] = {
-    [BASE] = {
-        { KC_NO, C_OFF },
-    },
 };
 
 // Keys
@@ -77,15 +77,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 // LED
-
-#define MOON_LED_LEVEL LED_LEVEL
-#define ML_SAFE_RANGE SAFE_RANGE
-
-extern rgb_config_t rgb_matrix_config;
-
-enum custom_keycodes {
-    RGB_SLD = ML_SAFE_RANGE,
-};
 
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [BASE] = {
@@ -188,6 +179,8 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF   , C_OFF
     },
 };
+
+// Funcs
 
 void keyboard_post_init_user(void) {
     rgb_matrix_enable();
