@@ -1,3 +1,5 @@
+#pragma once
+
 // Colors
 #define C_OFF      {   0,   0,   0 }
 #define C_BLUE     { 169, 255, 255 }

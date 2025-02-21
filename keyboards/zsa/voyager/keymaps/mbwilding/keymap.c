@@ -16,28 +16,11 @@ enum custom_keycodes {
 
 // User Code
 
+#include "layers.h"
 #include "colors.h"
-
-enum layers {
-    L_BASE,
-    L_SYMB,
-    L_NUMB,
-    L_MIDI,
-    L_GAME,
-    // L_MISC,
-
-    TOTAL_LAYERS,
-};
-
-enum tap_dances {
-    TD_ESC_DEL,
-};
+#include "tap_dance.h"
 
 // Keys
-
-tap_dance_action_t tap_dance_actions[] = {
-    [TD_ESC_DEL] = ACTION_TAP_DANCE_DOUBLE(KC_ESCAPE, KC_DELETE),
-};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_BASE] = LAYOUT_voyager(
@@ -46,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO,          KC_A,           KC_O,           KC_E,           KC_U,           KC_I,                                           KC_D,           KC_H,           KC_T,           KC_N,           KC_S,           KC_MINUS,
     KC_EXLM,        ALL_T(KC_SCLN), MEH_T(KC_Q),    KC_J,           KC_K,           KC_X,                                           KC_B,           KC_M,           KC_W,           MEH_T(KC_V),    ALL_T(KC_Z),    KC_QUES,
 
-                                                                    SFT_T(KC_SPC),  KC_BSPC,                                        LT(L_NUMB, TD(TD_ESC_DEL)), LT(L_SYMB, KC_ENT)
+                                                                    SFT_T(KC_SPC),  KC_BSPC,                                        TD(TD_ESC_DEL_NUMB),    LT(L_SYMB, KC_ENT)
   ),
 
   [L_SYMB] = LAYOUT_voyager(
