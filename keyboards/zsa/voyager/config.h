@@ -23,5 +23,5 @@
 
 #define TAPPING_TERM 144
 #define QUICK_TAP_TERM 0
-
+#define FORCE_NKRO
 #define MIDI_ADVANCED
