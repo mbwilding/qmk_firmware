@@ -9,7 +9,7 @@ VPATH += drivers/gpio
 SRC += matrix.c mcp23018.c
 I2C_DRIVER_REQUIRED = yes
 
-TAP_DANCE_ENABLE = yes
+TAP_DANCE_ENABLE = no
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
 MOUSEKEY_ENABLE = no

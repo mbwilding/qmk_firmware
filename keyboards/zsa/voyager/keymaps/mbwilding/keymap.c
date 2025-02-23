@@ -19,7 +19,6 @@ enum custom_keycodes {
 
 #include "layers.h"
 #include "colors.h"
-#include "tap_dances.h"
 
 // Keys
 
