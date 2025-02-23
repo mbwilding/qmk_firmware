@@ -6,7 +6,6 @@ enum layers {
     L_NUMB,
     L_MIDI,
     L_GAME,
-    // L_MISC,
 
     TOTAL_LAYERS,
 };
