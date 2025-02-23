@@ -26,7 +26,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [L_BASE] = LAYOUT_voyager(
     KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,          KC_NO,                                          KC_NO,          KC_NO,          KC_NO,          KC_NO,          TO(L_MIDI),     TO(L_GAME),
     KC_TAB,         KC_QUOTE,       KC_COMM,        KC_DOT,         KC_P,           KC_Y,                                           KC_F,           KC_G,           KC_C,           KC_R,           KC_L,           KC_AT,
-    KC_EXLM,        ALT_T(KC_A),    GUI_T(KC_O),    CTL_T(KC_E),    KC_U,           KC_I,                                           KC_D,           KC_H,           RCTL_T(KC_T),   RGUI_T(KC_N),   RALT_T(KC_S),   KC_QUES,
+    KC_EXLM,        CTL_T(KC_A),    GUI_T(KC_O),    ALT_T(KC_E),    KC_U,           KC_I,                                           KC_D,           KC_H,           RALT_T(KC_T),   RGUI_T(KC_N),   RCTL_T(KC_S),   KC_QUES,
     KC_TAB,         ALL_T(KC_SCLN), MEH_T(KC_Q),    KC_J,           KC_K,           KC_X,                                           KC_B,           KC_M,           KC_W,           MEH_T(KC_V),    ALL_T(KC_Z),    KC_DEL,
 
                                                                     SFT_T(KC_SPC),  KC_BSPC,                                        LT(L_NUMB, KC_ESC), LT(L_SYMB, KC_ENT)
