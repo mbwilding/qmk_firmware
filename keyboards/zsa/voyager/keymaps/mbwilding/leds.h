@@ -1,5 +1,6 @@
 #pragma once
 
+#include "layers.h"
 #include "colors.h"
 
 const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {

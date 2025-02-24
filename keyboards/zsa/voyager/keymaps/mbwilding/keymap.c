@@ -5,7 +5,6 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
-#include "layers.h"
 #include "keys.h"
 #include "leds.h"
 
