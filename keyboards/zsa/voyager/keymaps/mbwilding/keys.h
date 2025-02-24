@@ -6,17 +6,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼────────────┼────────────┤
 //    │  `  │    '     │    ,    │   .    │      p       │     y     │       │         f          │         g         │   c    │    r    │     l      │     @      │
 //    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼────────────┼────────────┤
-//    │  !  │ CTRL(a)  │ META(o) │ ALT(e) │      u       │     i     │       │         d          │         h         │ ALT(t) │ META(n) │  CTRL(s)   │     ?      │
+//    │  !  │ CTRL(a)  │ META(o) │ ALT(e) │      u       │     i     │       │         d          │         h         │ ALT(t) │ META(n) │  CTRL(s)   │    TAB     │
 //    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼────────────┼────────────┤
-//    │ TAB │ HYPER(;) │ MEH(q)  │   j    │      k       │     x     │       │         b          │         m         │   w    │ MEH(v)  │  HYPER(z)  │    del     │
+//    │  ?  │ HYPER(;) │ MEH(q)  │   j    │      k       │     x     │       │         b          │         m         │   w    │ MEH(v)  │  HYPER(z)  │    del     │
 //    └─────┴──────────┴─────────┴────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┴─────────┴────────────┴────────────┘
 //                                        │ SHIFT(SPACE) │ BACKSPACE │       │ LT(L_NUMB, ESCAPE) │ LT(L_SYMB, ENTER) │
 //                                        └──────────────┴───────────┘       └────────────────────┴───────────────────┘
 [L_BASE] = LAYOUT_voyager(
   KC_NO    , KC_NO          , KC_NO       , KC_NO       , KC_NO           , KC_NO   ,         KC_NO              , KC_NO                , KC_NO        , KC_NO        , TO(L_MIDI)   , TO(L_GAME),
   KC_GRAVE , KC_QUOTE       , KC_COMM     , KC_DOT      , KC_P            , KC_Y    ,         KC_F               , KC_G                 , KC_C         , KC_R         , KC_L         , KC_AT     ,
-  KC_EXLM  , CTL_T(KC_A)    , GUI_T(KC_O) , ALT_T(KC_E) , KC_U            , KC_I    ,         KC_D               , KC_H                 , RALT_T(KC_T) , RGUI_T(KC_N) , RCTL_T(KC_S) , KC_QUES   ,
-  KC_TAB   , ALL_T(KC_SCLN) , MEH_T(KC_Q) , KC_J        , KC_K            , KC_X    ,         KC_B               , KC_M                 , KC_W         , MEH_T(KC_V)  , ALL_T(KC_Z)  , KC_DEL    ,
+  KC_EXLM  , CTL_T(KC_A)    , GUI_T(KC_O) , ALT_T(KC_E) , KC_U            , KC_I    ,         KC_D               , KC_H                 , RALT_T(KC_T) , RGUI_T(KC_N) , RCTL_T(KC_S) , KC_TAB    ,
+  KC_QUES  , ALL_T(KC_SCLN) , MEH_T(KC_Q) , KC_J        , KC_K            , KC_X    ,         KC_B               , KC_M                 , KC_W         , MEH_T(KC_V)  , ALL_T(KC_Z)  , KC_DEL    ,
                                                           SFT_T(KC_SPACE) , KC_BSPC ,         LT(L_NUMB, KC_ESC) , LT(L_SYMB, KC_ENTER)
 ),
 
