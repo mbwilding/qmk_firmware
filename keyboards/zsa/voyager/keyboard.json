@@ -15,12 +15,12 @@
     },
     "features": {
         "bootmagic": true,
-        "caps_word": false,
+        "caps_word": true,
         "deferred_exec": true,
-        "mousekey": false,
+        "mousekey": true,
         "extrakey": true,
         "nkro": true,
-        "swap_hands": false,
+        "swap_hands": true,
         "rgb_matrix": true
     },
     "bootmagic": {
