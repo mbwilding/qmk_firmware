@@ -67,3 +67,22 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     }
     return true;
 }
+
+// bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+//     switch (keycode) {
+//         case MEH_T(KC_Q):
+//         case ALL_T(KC_Q):
+//         case CTL_T(KC_A):
+//         case GUI_T(KC_O):
+//         case ALT_T(KC_E):
+//         case RCTL_T(KC_A):
+//         case RGUI_T(KC_O):
+//         case RALT_T(KC_E):
+//         case SFT_T(KC_SPACE): // TODO: Check if wanted
+//             // Immediately select the hold action when another key is tapped.
+//             return true;
+//         default:
+//             // Do not select the hold action when another key is tapped.
+//             return false;
+//     }
+// }
