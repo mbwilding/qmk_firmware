@@ -3,42 +3,42 @@
 #include "layers.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-//    ┌─────┬──────────┬─────────┬────────┬──────────────┬───────────┐       ┌────────────────────┬───────────────────┬────────┬─────────┬──────────┬─────┐
-//    │  `  │    <     │    [    │   {    │      (       │           │       │                    │         )         │   }    │    ]    │    >     │  @  │
-//    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼──────────┼─────┤
-//    │  !  │    '     │    ,    │   .    │      p       │     y     │       │         f          │         g         │   c    │    r    │    l     │  ?  │
-//    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼──────────┼─────┤
-//    │     │ CTRL(a)  │ META(o) │ ALT(e) │      u       │     i     │       │         d          │         h         │ ALT(t) │ META(n) │ CTRL(s)  │ TAB │
-//    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼──────────┼─────┤
-//    │     │ HYPER(;) │ MEH(q)  │   j    │      k       │     x     │       │         b          │         m         │   w    │ MEH(v)  │ HYPER(z) │ del │
-//    └─────┴──────────┴─────────┴────────┼──────────────┼───────────┤       ├────────────────────┼───────────────────┼────────┴─────────┴──────────┴─────┘
-//                                        │ SHIFT(SPACE) │ BACKSPACE │       │ LT(L_NUMB, ESCAPE) │ LT(L_SYMB, ENTER) │
-//                                        └──────────────┴───────────┘       └────────────────────┴───────────────────┘
+//    ┌─────┬──────────┬─────────┬────────┬──────────────┬───────────────────────┐       ┌────────────────────┬───────────────────┬────────┬─────────┬──────────┬─────┐
+//    │  `  │    <     │    [    │   {    │      (       │                       │       │                    │         )         │   }    │    ]    │    >     │  @  │
+//    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────────────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼──────────┼─────┤
+//    │  !  │    '     │    ,    │   .    │      p       │           y           │       │         f          │         g         │   c    │    r    │    l     │  ?  │
+//    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────────────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼──────────┼─────┤
+//    │  =  │ CTRL(a)  │ META(o) │ ALT(e) │      u       │           i           │       │         d          │         h         │ ALT(t) │ META(n) │ CTRL(s)  │  -  │
+//    ├─────┼──────────┼─────────┼────────┼──────────────┼───────────────────────┤       ├────────────────────┼───────────────────┼────────┼─────────┼──────────┼─────┤
+//    │ TAB │ HYPER(;) │ MEH(q)  │   j    │      k       │           x           │       │         b          │         m         │   w    │ MEH(v)  │ HYPER(z) │ del │
+//    └─────┴──────────┴─────────┴────────┼──────────────┼───────────────────────┤       ├────────────────────┼───────────────────┼────────┴─────────┴──────────┴─────┘
+//                                        │ SHIFT(SPACE) │ LT(L_MISC, BACKSPACE) │       │ LT(L_NUMB, ESCAPE) │ LT(L_SYMB, ENTER) │
+//                                        └──────────────┴───────────────────────┘       └────────────────────┴───────────────────┘
 [L_BASE] = LAYOUT_voyager(
-  KC_GRAVE , KC_LABK        , KC_LBRC     , KC_LCBR     , KC_LPRN         , KC_NO   ,         KC_NO              , KC_RPRN              , KC_RCBR      , KC_RBRC      , KC_RABK      , KC_AT  ,
-  KC_EXLM  , KC_QUOTE       , KC_COMM     , KC_DOT      , KC_P            , KC_Y    ,         KC_F               , KC_G                 , KC_C         , KC_R         , KC_L         , KC_QUES,
-  KC_NO    , CTL_T(KC_A)    , GUI_T(KC_O) , ALT_T(KC_E) , KC_U            , KC_I    ,         KC_D               , KC_H                 , RALT_T(KC_T) , RGUI_T(KC_N) , RCTL_T(KC_S) , KC_TAB ,
-  KC_NO    , ALL_T(KC_SCLN) , MEH_T(KC_Q) , KC_J        , KC_K            , KC_X    ,         KC_B               , KC_M                 , KC_W         , MEH_T(KC_V)  , ALL_T(KC_Z)  , KC_DEL ,
-                                                          SFT_T(KC_SPACE) , KC_BSPC ,         LT(L_NUMB, KC_ESC) , LT(L_SYMB, KC_ENTER)
+  KC_GRAVE , KC_LABK        , KC_LBRC     , KC_LCBR     , KC_LPRN         , KC_NO               ,         KC_NO              , KC_RPRN              , KC_RCBR      , KC_RBRC      , KC_RABK      , KC_AT   ,
+  KC_EXLM  , KC_QUOTE       , KC_COMM     , KC_DOT      , KC_P            , KC_Y                ,         KC_F               , KC_G                 , KC_C         , KC_R         , KC_L         , KC_QUES ,
+  KC_EQUAL , CTL_T(KC_A)    , GUI_T(KC_O) , ALT_T(KC_E) , KC_U            , KC_I                ,         KC_D               , KC_H                 , RALT_T(KC_T) , RGUI_T(KC_N) , RCTL_T(KC_S) , KC_MINUS,
+  KC_TAB   , ALL_T(KC_SCLN) , MEH_T(KC_Q) , KC_J        , KC_K            , KC_X                ,         KC_B               , KC_M                 , KC_W         , MEH_T(KC_V)  , ALL_T(KC_Z)  , KC_DEL  ,
+                                                          SFT_T(KC_SPACE) , LT(L_MISC, KC_BSPC) ,         LT(L_NUMB, KC_ESC) , LT(L_SYMB, KC_ENTER)
 ),
 
 //    ┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
 //    │     │     │     │     │     │     │       │     │     │     │     │     │     │
 //    ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │     │     │     │     │     │       │     │     │     │     │    │     │
+//    │     │     │     │     │     │     │       │     │     │     │     │     │     │
 //    ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │  |  │  &  │  #  │  ^  │     │       │     │    │  *  │  %  │  +  │     │
+//    │     │  |  │  &  │  #  │  ^  │     │       │     │  $  │  *  │  %  │  +  │     │
 //    ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │     │  /  │  -  │    │    │     │       │     │  $  │     │  =  │  \  │     │
+//    │     │  /  │     │     │     │     │       │     │     │     │     │  \  │     │
 //    └─────┴─────┴─────┴─────┼─────┼─────┤       ├─────┼─────┼─────┴─────┴─────┴─────┘
 //                            │     │     │       │     │     │
 //                            └─────┴─────┘       └─────┴─────┘
 [L_SYMB] = LAYOUT_voyager(
-  KC_NO , KC_NO    , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO   , KC_NO    , KC_NO    , KC_NO,
-  KC_NO , KC_NO    , KC_NO    , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO   , KC_NO    , KC_RIGHT , KC_NO,
-  KC_NO , KC_PIPE  , KC_AMPR  , KC_HASH , KC_CIRC , KC_NO   ,         KC_NO   , KC_LEFT , KC_ASTR , KC_PERC  , KC_PLUS  , KC_NO,
-  KC_NO , KC_SLASH , KC_MINUS , KC_DOWN , KC_UP   , KC_NO   ,         KC_NO   , KC_DLR  , KC_NO   , KC_EQUAL , KC_BSLS  , KC_NO,
-                                          KC_TRNS , KC_TRNS ,         KC_TRNS , KC_TRNS
+  KC_NO , KC_NO    , KC_NO   , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO,
+  KC_NO , KC_NO    , KC_NO   , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_NO,
+  KC_NO , KC_PIPE  , KC_AMPR , KC_HASH , KC_CIRC , KC_NO   ,         KC_NO   , KC_DLR  , KC_ASTR , KC_PERC , KC_PLUS , KC_NO,
+  KC_NO , KC_SLASH , KC_NO   , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO   , KC_NO   , KC_BSLS , KC_NO,
+                                         KC_TRNS , KC_TRNS ,         KC_TRNS , KC_TRNS
 ),
 
 //    ┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -58,6 +58,25 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_TRNS , KC_F5 , KC_F6  , KC_F7  , KC_F8   , KC_NO   ,         KC_NO   , KC_4    , KC_5  , KC_6  , KC_0  , KC_TRNS,
   KC_TRNS , KC_F1 , KC_F2  , KC_F3  , KC_F4   , KC_NO   ,         KC_NO   , KC_1    , KC_2  , KC_3  , KC_NO , KC_NO  ,
                                       KC_TRNS , KC_TRNS ,         KC_TRNS , KC_TRNS
+),
+
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
+//    │     │     │     │     │     │     │       │     │     │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │       │     │     │     │     │    │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │     │     │     │       │     │    │     │     │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤       ├─────┼─────┼─────┼─────┼─────┼─────┤
+//    │     │     │     │    │    │     │       │     │     │     │     │     │     │
+//    └─────┴─────┴─────┴─────┼─────┼─────┤       ├─────┼─────┼─────┴─────┴─────┴─────┘
+//                            │     │     │       │     │     │
+//                            └─────┴─────┘       └─────┴─────┘
+[L_MISC] = LAYOUT_voyager(
+  KC_NO , KC_NO , KC_NO , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO , KC_NO , KC_NO    , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO , KC_NO , KC_RIGHT , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_NO   , KC_NO   , KC_NO   ,         KC_NO   , KC_LEFT , KC_NO , KC_NO , KC_NO    , KC_NO,
+  KC_NO , KC_NO , KC_NO , KC_DOWN , KC_UP   , KC_NO   ,         KC_NO   , KC_NO   , KC_NO , KC_NO , KC_NO    , KC_NO,
+                                    KC_TRNS , KC_TRNS ,         KC_TRNS , KC_TRNS
 ),
 
 //    ┌─────────────┬─────┬─────┬─────┬──────────┬─────────────┐       ┌─────────────┬──────────┬─────┬─────┬─────┬────────────┐
