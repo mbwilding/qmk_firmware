@@ -66,7 +66,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
     [L_MIDI] = {
         // Left Keys
-        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
+        C_LAYER,  C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
