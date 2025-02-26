@@ -72,7 +72,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
 
         // Left Thumbs
-        C_OFF,    C_OFF,
+        C_LAYER,  C_LAYER,
 
         // Right Keys
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_LAYER,
@@ -81,7 +81,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
 
         // Right Thumbs
-        C_OFF,    C_OFF
+        C_LAYER,  C_LAYER
     },
 
     [L_GAME] = {
