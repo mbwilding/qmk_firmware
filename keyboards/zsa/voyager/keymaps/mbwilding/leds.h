@@ -27,7 +27,7 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
     [L_SYMB] = {
         // Left Keys
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
-        C_OFF,    C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
         C_OFF,    C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
         C_OFF,    C_SYMBOL, C_SYMBOL, C_SYSTEM, C_SYSTEM, C_OFF,
 
@@ -36,9 +36,9 @@ const uint8_t PROGMEM ledmap[][RGB_MATRIX_LED_COUNT][3] = {
 
         // Right Keys
         C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_OFF,
-        C_OFF,    C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
-        C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
-        C_OFF,    C_SYSTEM, C_SYSTEM, C_SYMBOL, C_SYMBOL, C_OFF,
+        C_OFF,    C_OFF,    C_OFF,    C_OFF,    C_SYSTEM, C_OFF,
+        C_OFF,    C_SYSTEM, C_SYMBOL, C_SYMBOL, C_SYMBOL, C_OFF,
+        C_OFF,    C_SYMBOL, C_OFF,    C_SYMBOL, C_SYMBOL, C_OFF,
 
         // Right Thumbs
         C_LAYER,  C_LAYER
