@@ -8,8 +8,8 @@
 #define RGB_MATRIX_STARTUP_SPD 60
 
 #define PERMISSIVE_HOLD
-// #define TAPPING_TERM 144
-// #define QUICK_TAP_TERM 0
+#define TAPPING_TERM 144
+#define QUICK_TAP_TERM 0
 #define FORCE_NKRO
 #define MIDI_ADVANCED
 
