@@ -4,23 +4,23 @@
 #include "aliases.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-//    ┌─────┬───────────┬────────┬────────┬──────────┬───────────┐       ┌──────────┬──────────┬────────┬────────┬────────┬─────┐
-//    │  `  │     <     │   [    │   {    │    (     │     /     │       │    \     │    )     │   }    │   ]    │   >    │  @  │
-//    ├─────┼───────────┼────────┼────────┼──────────┼───────────┤       ├──────────┼──────────┼────────┼────────┼────────┼─────┤
-//    │  !  │     '     │   ,    │   .    │    p     │     y     │       │    f     │    g     │   c    │   r    │   l    │  ?  │
-//    ├─────┼───────────┼────────┼────────┼──────────┼───────────┤       ├──────────┼──────────┼────────┼────────┼────────┼─────┤
-//    │  =  │  HOME_A   │ HOME_O │ HOME_E │    u     │     i     │       │    d     │    h     │ HOME_T │ HOME_N │ HOME_S │  -  │
-//    ├─────┼───────────┼────────┼────────┼──────────┼───────────┤       ├──────────┼──────────┼────────┼────────┼────────┼─────┤
-//    │ TAB │ HOME_SCLN │ HOME_Q │   j    │    k     │     x     │       │    b     │    m     │   w    │ HOME_V │ HOME_Z │ del │
-//    └─────┴───────────┴────────┴────────┼──────────┼───────────┤       ├──────────┼──────────┼────────┴────────┴────────┴─────┘
-//                                        │ HOME_SPC │ HOME_BSPC │       │ HOME_ESC │ HOME_ENT │
-//                                        └──────────┴───────────┘       └──────────┴──────────┘
+//    ┌─────┬───────────┬────────┬────────┬───────────┬────────────┐       ┌───────────┬───────────┬────────┬────────┬────────┬─────┐
+//    │  `  │     <     │   [    │   {    │     (     │     /      │       │     \     │     )     │   }    │   ]    │   >    │  @  │
+//    ├─────┼───────────┼────────┼────────┼───────────┼────────────┤       ├───────────┼───────────┼────────┼────────┼────────┼─────┤
+//    │  !  │     '     │   ,    │   .    │     p     │     y      │       │     f     │     g     │   c    │   r    │   l    │  ?  │
+//    ├─────┼───────────┼────────┼────────┼───────────┼────────────┤       ├───────────┼───────────┼────────┼────────┼────────┼─────┤
+//    │  =  │  HOME_A   │ HOME_O │ HOME_E │     u     │     i      │       │     d     │     h     │ HOME_T │ HOME_N │ HOME_S │  -  │
+//    ├─────┼───────────┼────────┼────────┼───────────┼────────────┤       ├───────────┼───────────┼────────┼────────┼────────┼─────┤
+//    │ TAB │ HOME_SCLN │ HOME_Q │   j    │     k     │     x      │       │     b     │     m     │   w    │ HOME_V │ HOME_Z │ del │
+//    └─────┴───────────┴────────┴────────┼───────────┼────────────┤       ├───────────┼───────────┼────────┴────────┴────────┴─────┘
+//                                        │ THUMB_SPC │ THUMB_BSPC │       │ THUMB_ESC │ THUMB_ENT │
+//                                        └───────────┴────────────┘       └───────────┴───────────┘
 [L_BASE] = LAYOUT_voyager(
-  KC_GRAVE , KC_LABK   , KC_LBRC , KC_LCBR , KC_LPRN  , KC_SLASH  ,         KC_BSLS  , KC_RPRN  , KC_RCBR , KC_RBRC , KC_RABK , KC_AT   ,
-  KC_EXLM  , KC_QUOTE  , KC_COMM , KC_DOT  , KC_P     , KC_Y      ,         KC_F     , KC_G     , KC_C    , KC_R    , KC_L    , KC_QUES ,
-  KC_EQUAL , HOME_A    , HOME_O  , HOME_E  , KC_U     , KC_I      ,         KC_D     , KC_H     , HOME_T  , HOME_N  , HOME_S  , KC_MINUS,
-  KC_TAB   , HOME_SCLN , HOME_Q  , KC_J    , KC_K     , KC_X      ,         KC_B     , KC_M     , KC_W    , HOME_V  , HOME_Z  , KC_DEL  ,
-                                             HOME_SPC , HOME_BSPC ,         HOME_ESC , HOME_ENT
+  KC_GRAVE , KC_LABK   , KC_LBRC , KC_LCBR , KC_LPRN   , KC_SLASH   ,         KC_BSLS   , KC_RPRN   , KC_RCBR , KC_RBRC , KC_RABK , KC_AT   ,
+  KC_EXLM  , KC_QUOTE  , KC_COMM , KC_DOT  , KC_P      , KC_Y       ,         KC_F      , KC_G      , KC_C    , KC_R    , KC_L    , KC_QUES ,
+  KC_EQUAL , HOME_A    , HOME_O  , HOME_E  , KC_U      , KC_I       ,         KC_D      , KC_H      , HOME_T  , HOME_N  , HOME_S  , KC_MINUS,
+  KC_TAB   , HOME_SCLN , HOME_Q  , KC_J    , KC_K      , KC_X       ,         KC_B      , KC_M      , KC_W    , HOME_V  , HOME_Z  , KC_DEL  ,
+                                             THUMB_SPC , THUMB_BSPC ,         THUMB_ESC , THUMB_ENT
 ),
 
 //    ┌─────┬─────┬─────┬─────┬─────┬─────┐       ┌─────┬─────┬─────┬─────┬─────┬─────┐
