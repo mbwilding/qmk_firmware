@@ -5,7 +5,6 @@
 #define C_BLUE     { 169, 255, 255 }
 #define C_CYAN     { 131, 255, 255 }
 #define C_GREEN    {  74, 255, 255 }
-#define C_DGREEN   {  85, 255, 128 }
 #define C_LBLUE    { 152, 255, 255 }
 #define C_PURPLE   { 188, 255, 255 }
 #define C_RED      {   0, 255, 255 }
@@ -20,4 +19,3 @@
 #define C_PUNCTU   C_YELLOW
 #define C_SYMBOL   C_RED
 #define C_WSAD     C_RED
-#define C_MIDI     C_DGREEN

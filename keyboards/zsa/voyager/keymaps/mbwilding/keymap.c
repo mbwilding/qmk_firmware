@@ -10,7 +10,6 @@
 #include "leds.h"
 
 extern rgb_config_t rgb_matrix_config;
-extern MidiDevice   midi_device;
 
 #define MOON_LED_LEVEL LED_LEVEL
 #define ML_SAFE_RANGE SAFE_RANGE
